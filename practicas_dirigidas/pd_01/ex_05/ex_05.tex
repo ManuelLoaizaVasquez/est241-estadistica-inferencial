@@ -1,0 +1,93 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsfonts,latexsym,amsthm,amssymb,amsmath,amscd,euscript}
+\usepackage{mathtools}
+\usepackage{framed}
+% Descomentar fullpage cuando se quiera utilizar menos margen horizontal
+%\usepackage{fullpage}
+\usepackage{hyperref}
+    \hypersetup{colorlinks=true,citecolor=blue,urlcolor =black,linkbordercolor={1 0 0}}
+
+\newenvironment{statement}[1]{\smallskip\noindent\color[rgb]{1.00,0.00,0.50} {\bf #1.}}{}
+\allowdisplaybreaks[1]
+
+% Comandos para teoremas, definiciones, ejemplos, lemas, etc. para sus respectivos body types.
+\renewcommand*{\proofname}{Prueba}
+\renewcommand{\contentsname}{Contenido}
+
+\newtheorem{theorem}{Teorema}
+\newtheorem*{proposition}{Proposici\'on}
+\newtheorem{lemma}[theorem]{Lema}
+\newtheorem{corollary}[theorem]{Corolario}
+\newtheorem{conjecture}[theorem]{Conjetura}
+\newtheorem*{postulate}{Postulado}
+\theoremstyle{definition}
+\newtheorem{defn}[theorem]{Definici\'on}
+\newtheorem{example}[theorem]{Ejemplo}
+
+\theoremstyle{remark}
+\newtheorem*{remark}{Observaci\'on}
+\newtheorem*{notation}{Notaci\'on}
+\newtheorem*{note}{Nota}
+
+% Define tus comandos para hacer la vida más fácil.
+\newcommand{\BR}{\mathbb R}
+\newcommand{\BC}{\mathbb C}
+\newcommand{\BF}{\mathbb F}
+\newcommand{\BQ}{\mathbb Q}
+\newcommand{\BZ}{\mathbb Z}
+\newcommand{\BN}{\mathbb N}
+
+\title{EST241 Estad\'istica Inferencial}
+\author{Manuel Loaiza Vasquez}
+\date{Septiembre 2021}
+
+\begin{document}
+
+\maketitle
+
+\vspace*{-0.25in}
+\centerline{Pontificia Universidad Cat\'olica del Per\'u}
+\centerline{Lima, Per\'u}
+\centerline{\href{mailto:manuel.loaiza@pucp.edu.pe}{{\tt manuel.loaiza@pucp.edu.pe}}}
+\vspace*{0.15in}
+
+\begin{framed}
+  Soluci\'on del ejercicio $5$ de la pr\'actica dirigida $1$ del curso
+  Estad\'istica Inferencial dictado por el profesor Luis Valdivieso Serrano
+  y el jefe de pr\'actica Gerald Lozano.
+\end{framed}
+
+\begin{statement}{5}
+  Una acci\'on valuada incialmente en S$/. 10$, se cotiza en dos periodos.
+  Durante cada periodo la acci\'on puede bajar, permanecer igual o subir en S$/. 1$.
+  Las probabilidades de estos eventos en el primer periodo son $0.2$, $0.5$ y $0.3$ respectivamente.
+  En el segundo, la acci\'on puede volver a subir con probabilidad $0.3$ y bajar
+  despu\'es de subir en el primero con probabilidad $0.1$.
+  Ahora, si la acci\'on se mantiene igual en el periodo inicial, puede subir en
+  el segundo con probabilidad $0.4$ y puede mantenerse igual con probabilidad
+  $0.35$. Finalmente, si la acci\'on baja en el primer periodo, lo seguir\'a
+  haciendo en el segundo periodo con probabilidad $0.5$, y subir\'a con
+  probabilidad $0.1$.
+\end{statement}
+
+\begin{statement}{a}
+  Halle la probabilidad de que el valor final de la acci\'on sea de S$/. 12$.
+\end{statement}
+
+\begin{statement}{b}
+  Si el valor final de la acci\'on iguala al valor inicial, ¿cu\'al ser\'ia
+  la probabilidad de que la acci\'on haya bajado?
+\end{statement}
+
+\begin{statement}{c}
+  Sea $X$ = valor final de la acci\'on. Halle su funci\'on de probabilidad
+  y valor esperado.
+\end{statement}
+
+\begin{statement}{d}
+  Halle y grafique la funci\'on de distribuci\'on d ela variable aleatoria
+  $Y$ = n\'umero de periodos hasta que la acci\'on suba.
+\end{statement}
+
+\end{document}
