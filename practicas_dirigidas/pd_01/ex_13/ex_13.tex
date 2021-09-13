@@ -1,0 +1,88 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsfonts,latexsym,amsthm,amssymb,amsmath,amscd,euscript}
+\usepackage{mathtools}
+\usepackage{framed}
+% Descomentar fullpage cuando se quiera utilizar menos margen horizontal
+%\usepackage{fullpage}
+\usepackage{hyperref}
+    \hypersetup{colorlinks=true,citecolor=blue,urlcolor =black,linkbordercolor={1 0 0}}
+
+\newenvironment{statement}[1]{\smallskip\noindent\color[rgb]{1.00,0.00,0.50} {\bf #1.}}{}
+\allowdisplaybreaks[1]
+
+% Comandos para teoremas, definiciones, ejemplos, lemas, etc. para sus respectivos body types.
+\renewcommand*{\proofname}{Prueba}
+\renewcommand{\contentsname}{Contenido}
+
+\newtheorem{theorem}{Teorema}
+\newtheorem*{proposition}{Proposici\'on}
+\newtheorem{lemma}[theorem]{Lema}
+\newtheorem{corollary}[theorem]{Corolario}
+\newtheorem{conjecture}[theorem]{Conjetura}
+\newtheorem*{postulate}{Postulado}
+\theoremstyle{definition}
+\newtheorem{defn}[theorem]{Definici\'on}
+\newtheorem{example}[theorem]{Ejemplo}
+
+\theoremstyle{remark}
+\newtheorem*{remark}{Observaci\'on}
+\newtheorem*{notation}{Notaci\'on}
+\newtheorem*{note}{Nota}
+
+% Define tus comandos para hacer la vida más fácil.
+\newcommand{\BR}{\mathbb R}
+\newcommand{\BC}{\mathbb C}
+\newcommand{\BF}{\mathbb F}
+\newcommand{\BQ}{\mathbb Q}
+\newcommand{\BZ}{\mathbb Z}
+\newcommand{\BN}{\mathbb N}
+
+\title{EST241 Estad\'istica Inferencial}
+\author{Manuel Loaiza Vasquez}
+\date{Septiembre 2021}
+
+\begin{document}
+
+\maketitle
+
+\vspace*{-0.25in}
+\centerline{Pontificia Universidad Cat\'olica del Per\'u}
+\centerline{Lima, Per\'u}
+\centerline{\href{mailto:manuel.loaiza@pucp.edu.pe}{{\tt manuel.loaiza@pucp.edu.pe}}}
+\vspace*{0.15in}
+
+\begin{framed}
+  Soluci\'on del ejercicio $13$ de la pr\'actica dirigida $1$ del curso
+  Estad\'istica Inferencial dictado por el profesor Luis Valdivieso Serrano
+  y el jefe de pr\'actica Gerald Lozano.
+\end{framed}
+
+\begin{statement}{13}
+  Las ventas de un producto ocurren de acuerdo a un proceso de Poisson a una
+  tasa $\omega = \sqrt{k} / 3$ ventas por d\'ia, donde $k$ es la cantidad de
+  soles diarios que el productor gasta en propaganda.
+  El producto se vende a $80$ soles la unidad y su costo de producci\'on por
+  unidad es $20$ soles. Si cada venta se limita a un producto:
+\end{statement}
+
+\begin{statement}{a}
+  Para $k = 9$, calcule la probabilidad de que en $5$ d\'ias se tenga una
+  utilidad mayor a los $300$ soles.
+\end{statement}
+
+\begin{statement}{b}
+  Asumamos $k = 9$.
+  Suponga que se han vendido en los primeros $10$ d\'ias del mes ya $12$
+  productos y que al vendedor encargado se le ha prometido una comisi\'on apenas
+  logre vender $15$ productos, ¿qu\'e tiempo se espera transcurra hasta que
+  se le d\'e la comisi\'on y qu\'e probabilidad existe de que esta la reciba
+  en el mes en curso?
+\end{statement}
+
+\begin{statement}{c}
+  Para una compa\~na de dos meses, determine el valor \'optimo de $k$ de tal
+  manera que la utilidad esperada del productor sea m\'axima.
+\end{statement}
+
+\end{document}
