@@ -1,0 +1,102 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsfonts,latexsym,amsthm,amssymb,amsmath,amscd,euscript}
+\usepackage{mathtools}
+\usepackage{framed}
+% Descomentar fullpage cuando se quiera utilizar menos margen horizontal
+%\usepackage{fullpage}
+\usepackage{hyperref}
+    \hypersetup{colorlinks=true,citecolor=blue,urlcolor =black,linkbordercolor={1 0 0}}
+
+\newenvironment{statement}[1]{\smallskip\noindent\color[rgb]{1.00,0.00,0.50} {\bf #1.}}{}
+\allowdisplaybreaks[1]
+
+% Comandos para teoremas, definiciones, ejemplos, lemas, etc. para sus respectivos body types.
+\renewcommand*{\proofname}{Prueba}
+\renewcommand{\contentsname}{Contenido}
+
+\newtheorem{theorem}{Teorema}
+\newtheorem*{proposition}{Proposici\'on}
+\newtheorem{lemma}[theorem]{Lema}
+\newtheorem{corollary}[theorem]{Corolario}
+\newtheorem{conjecture}[theorem]{Conjetura}
+\newtheorem*{postulate}{Postulado}
+\theoremstyle{definition}
+\newtheorem{defn}[theorem]{Definici\'on}
+\newtheorem{example}[theorem]{Ejemplo}
+
+\theoremstyle{remark}
+\newtheorem*{remark}{Observaci\'on}
+\newtheorem*{notation}{Notaci\'on}
+\newtheorem*{note}{Nota}
+
+% Define tus comandos para hacer la vida más fácil.
+\newcommand{\BR}{\mathbb R}
+\newcommand{\BC}{\mathbb C}
+\newcommand{\BF}{\mathbb F}
+\newcommand{\BQ}{\mathbb Q}
+\newcommand{\BZ}{\mathbb Z}
+\newcommand{\BN}{\mathbb N}
+
+\title{EST241 Estad\'istica Inferencial}
+\author{Manuel Loaiza Vasquez}
+\date{Septiembre 2021}
+
+\begin{document}
+
+\maketitle
+
+\vspace*{-0.25in}
+\centerline{Pontificia Universidad Cat\'olica del Per\'u}
+\centerline{Lima, Per\'u}
+\centerline{\href{mailto:manuel.loaiza@pucp.edu.pe}{{\tt manuel.loaiza@pucp.edu.pe}}}
+\vspace*{0.15in}
+
+\begin{framed}
+  Soluci\'on del ejercicio $14$ de la pr\'actica dirigida $1$ del curso
+  Estad\'istica Inferencial dictado por el profesor Luis Valdivieso Serrano
+  y el jefe de pr\'actica Gerald Lozano.
+\end{framed}
+
+\begin{statement}{a}
+  Si $X \sim \text{Exp}(\beta)$ y $\mathbb{P}(X > 5\, |\, X > 3) = e^{-2}$.
+  Halle $\beta$.
+\end{statement}
+
+\begin{statement}{b}
+  Si $f_X(x) = 2 - a x^2$, para $|x| \leq 8$, halle el valor de $a$ para que esta
+  sea una funci\'on de densidad de la variable aleatoria $X$ y calcule
+  $\mathbb{P}(X > 5\, |\, X > 3)$.
+\end{statement}
+
+\begin{statement}{c}
+  Si $X \sim \text{Exp}(\beta)$, halle la funci\'on de densidad de la variable
+  aleatoria $Y = X^2$ y obtenga tambi\'en el valor esperado y la varianza
+  de esta variable aleatoria.
+\end{statement}
+
+\begin{statement}{d}
+  Si $X \sim \text{Exp}(\beta)$, halle su funci\'on de generadora de momentos y
+  utilice esta para obtener su coeficiente de sesgo de Pearson, el cual est\'a
+  definido por
+  \[
+    \mathbb{E}\left[\frac{(X - \mathbb{E}[X])^3}{\sigma_X^3}\right],
+  \]
+  donde $\sigma_X$ denota a la desviaci\'on est\'andar de la variable aleatoria $X$.
+\end{statement}
+
+\begin{statement}{e}
+  Si $X \sim \mathcal{U}_{[-q, q]}$ con $q > 0$. Halle el valor de que $q$ de
+  modo que
+  \[
+    \mathbb{P}(|X| < 2) = \mathbb{P}(|X| > 2).  
+  \]
+\end{statement}
+
+\begin{statement}{f}
+  Si $X$ tiene una distruci\'on uniforme $\mathcal{U}_{[0, 9]}$, obtenga la
+  funci\'on de densidad, valor esperado y desviaci\'on est\'andar de la
+  variable aleatoria $Y = \sqrt{X}$.
+\end{statement}
+
+\end{document}
