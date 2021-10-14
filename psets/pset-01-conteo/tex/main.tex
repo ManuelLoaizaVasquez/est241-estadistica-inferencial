@@ -1,0 +1,141 @@
+\title{EST241 Estad\'istica Inferencial}
+\author{Manuel Loaiza Vasquez}
+\date{Octubre 2021}
+
+\begin{document}
+
+\maketitle
+
+\vspace*{-0.25in}
+\centerline{Pontificia Universidad Cat\'olica del Per\'u}
+\centerline{Lima, Per\'u}
+\centerline{\mailto{manuel.loaiza@pucp.edu.pe}}
+\vspace*{0.15in}
+
+\begin{framed}
+  Lista de ejercicios sobre t\'ecnicas de conteo para practicar antes del examen parcial.
+\end{framed}
+
+\section{Bolas y casilleros}
+
+En esta secci\'on investigaremos los efectos de ciertos supuestos en el n\'umero de maneras
+de colocar $n$ bolas en $b$ casillas.
+
+\input{tex/exercises/balls-and-bins/exercise-01.tex}
+
+\input{tex/exercises/balls-and-bins/exercise-02.tex}
+
+\input{tex/exercises/balls-and-bins/exercise-03.tex}
+
+\input{tex/exercises/balls-and-bins/exercise-04.tex}
+
+\input{tex/exercises/balls-and-bins/exercise-05.tex}
+
+\section{Conteo}
+
+\input{tex/exercises/counting/exercise-06.tex}
+
+\input{tex/exercises/counting/exercise-07.tex}
+
+\input{tex/exercises/counting/exercise-08.tex}
+
+\input{tex/exercises/counting/exercise-09.tex}
+    
+\input{tex/exercises/counting/exercise-10.tex}
+
+\input{tex/exercises/counting/exercise-11.tex}
+
+\input{tex/exercises/counting/exercise-12.tex}
+
+\input{tex/exercises/counting/exercise-13.tex}
+
+\input{tex/exercises/counting/exercise-14.tex}
+
+\input{tex/exercises/counting/exercise-15.tex}
+
+\input{tex/exercises/counting/exercise-16.tex}
+
+\input{tex/exercises/counting/exercise-17.tex}
+
+\input{tex/exercises/counting/exercise-18.tex}
+
+\input{tex/exercises/counting/exercise-19.tex}
+
+\input{tex/exercises/counting/exercise-20.tex}
+
+\input{tex/exercises/counting/exercise-21.tex}
+
+\input{tex/exercises/counting/exercise-22.tex}
+
+\input{tex/exercises/counting/exercise-23.tex}
+
+\input{tex/exercises/counting/exercise-24.tex}
+
+\input{tex/exercises/counting/exercise-25.tex}
+
+\input{tex/exercises/counting/exercise-26.tex}
+
+\input{tex/exercises/counting/exercise-27.tex}
+
+Definimos la \textbf{funci\'on de entrop\'ia} a $H: [0, 1] \to \BR$ con
+\[
+    H(\lambda)     = -\lambda \log_2 \lambda - (1 - \lambda) \log_2 (1 - \lambda)
+\]
+donde, por conveniencia, asumimos que $0 \log_2 0 = 0$, por lo que $H(0) = H(1) = 0$.
+
+\input{tex/exercises/counting/exercise-28.tex}
+
+\input{tex/exercises/counting/exercise-29.tex}
+
+\section{Aproximaci\'on de Stirling}
+
+Una cota superior un poco d\'ebil de la funci\'on factorial es $n! \leq n^n$, pues cada
+uno de los $n$ t\'erminos en el producto factorial es a lo m\'as $n$.
+La \textbf{aproximaci\'on de Stirling}
+\[
+    n! = \sqrt{2 \pi n} \left(\frac{n}{e}\right)^n \left(1 + \Theta\left(\frac{1}{n}\right)\right)
+\]
+nos da una cota superior m\'as apretada, y una cota inferior tambi\'en.
+
+\begin{theorem}
+    Dado un n\'umero entero positivo $n$, se cumple $n! = o(n^n)$.
+\end{theorem}
+
+\begin{proof}
+    Ejercicio para el lector.
+\end{proof}
+
+\begin{theorem}
+    Dado un n\'umero entero positivo $n$, se cumple $n! = \omega(2^n)$.
+\end{theorem}
+
+\begin{proof}
+    Ejercicio para el lector.
+\end{proof}
+
+\begin{theorem}
+    Dado un n\'umero entero positivo $n$, se cumple $\log_2(n!) = \Theta(n \log_2 n)$.
+\end{theorem}
+
+\begin{proof}
+    Ejercicio para el lector.
+\end{proof}
+
+\begin{theorem}
+    La siguiente ecuaci\'on se cumple para $n \geq 1$
+    \[
+        n! = \sqrt{2 \pi n} \left(\frac{n}{e}\right)^n e^{\alpha_n}
+    \]
+    donde
+    \[
+        \frac{1}{12n + 1} < \alpha_n < \frac{1}{12n}.
+    \]
+\end{theorem}
+
+\begin{proof}
+    Ejercicio para el lector.
+\end{proof}
+
+\input{tex/exercises/counting/exercise-30.tex}
+
+\end{document}
