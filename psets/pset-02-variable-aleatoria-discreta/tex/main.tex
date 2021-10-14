@@ -1,0 +1,203 @@
+\title{EST241 Estad\'istica Inferencial}
+\author{Manuel Loaiza Vasquez}
+\date{Octubre 2021}
+
+\begin{document}
+
+\maketitle
+
+\vspace*{-0.25in}
+\centerline{Pontificia Universidad Cat\'olica del Per\'u}
+\centerline{Lima, Per\'u}
+\centerline{\mailto{manuel.loaiza@pucp.edu.pe}}
+\vspace*{0.15in}
+
+\begin{framed}
+    Lista de ejercicios sobre variable aleatoria discreta para practicar antes del examen parcial.
+\end{framed}
+
+\section{Probabilidad}
+
+\input{tex/exercises/probability/exercise-01.tex}
+
+\input{tex/exercises/probability/exercise-02.tex}
+
+\input{tex/exercises/probability/exercise-03.tex}
+
+\input{tex/exercises/probability/exercise-04.tex}
+
+\input{tex/exercises/probability/exercise-05.tex}
+
+\input{tex/exercises/probability/exercise-06.tex}
+
+\input{tex/exercises/probability/exercise-07.tex}
+
+\section{Variable Aleatoria Discreta}
+
+\input{tex/exercises/discrete-random-variable/exercise-08.tex}
+
+\input{tex/exercises/discrete-random-variable/exercise-09.tex}
+
+\input{tex/exercises/discrete-random-variable/exercise-10.tex}
+
+\input{tex/exercises/discrete-random-variable/exercise-11.tex}
+
+\input{tex/exercises/discrete-random-variable/exercise-12.tex}
+
+\input{tex/exercises/discrete-random-variable/exercise-13.tex}
+
+\input{tex/exercises/discrete-random-variable/exercise-14.tex}
+
+\input{tex/exercises/discrete-random-variable/exercise-15.tex}
+
+\input{tex/exercises/discrete-random-variable/exercise-16.tex}
+
+\input{tex/exercises/discrete-random-variable/exercise-17.tex}
+
+\section{Distribuci\'on Geom\'etrica y Binomial}
+
+\input{tex/exercises/geometric-and-binomial-distribution/exercise-18.tex}
+
+\input{tex/exercises/geometric-and-binomial-distribution/exercise-19.tex}
+
+\input{tex/exercises/geometric-and-binomial-distribution/exercise-20.tex}
+
+\input{tex/exercises/geometric-and-binomial-distribution/exercise-21.tex}
+
+\input{tex/exercises/geometric-and-binomial-distribution/exercise-22.tex}
+
+\begin{defn}
+    Definimos la \textbf{funci\'on de entrop\'ia} a $H: [0, 1] \to \BR$ con
+    \[
+        H(\lambda)     = -\lambda \log_2 \lambda - (1 - \lambda) \log_2 (1 - \lambda)
+    \]
+    donde, por conveniencia, asumimos que $0 \log_2 0 = 0$, por lo que $H(0) = H(1) = 0$.
+\end{defn}
+
+\input{tex/exercises/geometric-and-binomial-distribution/exercise-23.tex}
+
+\input{tex/exercises/geometric-and-binomial-distribution/exercise-24.tex}
+
+\input{tex/exercises/geometric-and-binomial-distribution/exercise-25.tex}
+
+\section{Distribuci\'on Binomial: Amenaza Nivel Vengador}
+
+La probabilidad de tener al menos, o a lo m\'as, $k$ \'exitos en $n$ experimentos de Bernoulli,
+cada uno con probabilidad $p$ de \'exito, es normalmente de mayor inter\'es que la probabilidad
+de tener exactamente $k$ \'exitos.
+
+\begin{theorem}
+    Considere una sucesi\'on de $n$ experimentos de Bernoulli, donde un \'exito ocurre con probabilidad $p$.
+    Sea $X$ una variable aleatoria denotando el n\'umero total de \'exitos.
+    Luego, para $0 \leq k \leq n$, la probabilidad de al menos $k$ \'exitos es
+    \[
+        \BP[X \geq k] \leq \binom{n}{k} p^k.
+    \]
+\end{theorem}
+
+\begin{proof}
+    Ejercicio para el lector.
+\end{proof}
+
+\begin{corollary}
+    Considere una sucesi\'on de $n$ experimentos de Bernoulli, donde un \'exito ocurre con probabilidad $p$.
+    Sea $X$ una variable aleatoria denotando el n\'umero total de \'exitos.
+    Luego, para $0 \leq k \leq n$, la probabilidad de al menos $k$ \'exitos es
+    \[
+        \BP[X \geq k] \leq \binom{n}{k} (1 - p)^{n - k}.
+    \]
+\end{corollary}
+
+\begin{proof}
+    Ejercicio para el lector.
+\end{proof}
+
+\begin{theorem}
+    Considere una sucesi\'on de $n$ experimentos de Bernoulli, donde un \'exito ocurre con una probabilidad $p$
+    y un fracaso con una probabilidad $q = 1 - p$.
+    Sea $X$ una variable aleatoria denotando el n\'umero total de \'exitos.
+    Luego para todo $0 < k < np$, la probabilidad de obtener menos de $k$ \'exitos es
+    \[
+        \BP[X < k] < \frac{kq}{np - k} \CB(k; n, p).
+    \]
+\end{theorem}
+
+\begin{proof}
+    Ejercicio para el lector.
+\end{proof}
+
+\begin{corollary}
+    Considere una sucesi\'on de $n$ experimentos de Bernoulli, donde un \'exito ocurre con una probabilidad $p$
+    y un fracaso con una probabilidad $q = 1 - p$.
+    Luego para todo $0 < k \leq np / 2$, la probabilidad de obtener menos de $k$ \'exitos es menor que
+    la mitad de la probabilidad de obtener menos de $k + 1$ \'exitos.
+\end{corollary}
+
+\begin{proof}
+    Ejercicio para el lector.
+\end{proof}
+
+\begin{corollary}
+    Considere una sucesi\'on de $n$ experimentos de Bernoulli, donde un \'exito ocurre con una probabilidad $p$.
+    Sea $X$ una variable aleatoria denotando el n\'umero total de \'exitos.
+    Lueog para $np < k < n$, la probabilidad de obtener m\'as de $k$ \'exitos es
+    \[
+        \BP[X > k] < \frac{(n - k)p}{k - np} \CB(k; n, p).
+    \]
+\end{corollary}
+
+\begin{proof}
+    Ejercicio para el lector.
+\end{proof}
+
+\begin{corollary}
+    Considere una sucesi\'on de $n$ experimentos de Bernoulli, donde el \'exito ocurre con una probabilidad $p$
+    y el fracaso con una probabilidad $q = 1 - p$. Luego para $(np + n) / 2 < k < n$, la probabilidad de obtener
+    m\'as de $k$ \'exitos es menor que la mitad de obtener m\'as de $k - 1$ \'exitos.
+\end{corollary}
+
+\begin{proof}
+    Ejercicio para el lector.
+\end{proof}
+
+\begin{theorem}
+    Considere una sucesi\'on de $n$ experimentos de Bernoulli, donde el $i$-\'esimo experimento es exitoso
+    con una probabilidad $p_i$ y fracasa con una probabilidad $q_i = 1 - p_i$, para $i = 1, \dots, n$.
+    Sea $X$ una variable aleatoria describiendo el n\'umero total de \'exitos, y sea $\mu = \BE[X]$.
+    Luego para $r > \mu$,
+    \[
+        \BP[X - \mu \geq r] \leq \left(\frac{\mu e}{r}\right)^r
+    \]
+\end{theorem}
+
+\begin{proof}
+    Ejercicio para el lector.
+\end{proof}
+
+\begin{theorem}
+    Considere una sucesi\'on de $n$ experimentos de Bernoulli, donde cada experimento es exitoso
+    con una probabilidad $p$ y fracasa con una probabilidad $q = 1 - p$. Luego para $r > np$,
+    \[
+        \BP[X - np \geq r] \leq \left(\frac{npe}{r}\right)^r.
+    \]
+\end{theorem}
+
+\begin{proof}
+    Ejercicio para el lector.
+\end{proof}
+
+\input{tex/exercises/binomial-distribution/exercise-26.tex}
+
+\input{tex/exercises/binomial-distribution/exercise-27.tex}
+
+\input{tex/exercises/binomial-distribution/exercise-28.tex}
+
+\input{tex/exercises/binomial-distribution/exercise-29.tex}
+
+\input{tex/exercises/binomial-distribution/exercise-30.tex}
+
+\input{tex/exercises/binomial-distribution/exercise-31.tex}
+
+\input{tex/exercises/binomial-distribution/exercise-32.tex}
+
+\end{document}
